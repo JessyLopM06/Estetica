@@ -7,21 +7,8 @@
   align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
-  margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
+  margin-top: 0; /* Esto eliminará el margen superior */
 }
 
 .title {
@@ -37,6 +24,55 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
+
+
+.textInput {
+  padding: 10px;
+  font-size: 14px; /* Tamaño de fuente */
+  border: 2px solid black ;
+  border-radius: 10px; /* Ajustar este valor para cambiar el grado de redondeo */
+  outline: none; /* Para quitar el borde al seleccionar el input */
+  
+}
+
+.smallText {
+  font-size: 14px; /* Ajustar el tamaño a tu preferencia para estilo descripcion*/
+}
+
+.smallTitle {
+  font-size: 25px; /* Puedes ajustar el tamaño a tu preferencia */
+}
+
+.redText {
+  color: rgb(198, 38, 38);
+}
+
+.blackText {
+  color : black;
+}
+
+/*Para los comentarios*/
+.richTextArea {
+  width: 100%;
+  min-height: 50px; /* ajusta la altura según lo necesites */
+  resize: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  left: 0;
+  position: 'fixed'    
+}
+
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;          /* Para usar flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;    /* Centrar verticalmente */
+}
+
+
+
 
 .grid {
   display: flex;
@@ -62,22 +98,75 @@
     border-color 0.15s ease;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.descriptionContainer {
+  background-color: #f2f2f2; /* Color gris claro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  display: flex; /* Activa Flexbox */
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.separator {
+  flex: 1; /* Utiliza todo el espacio disponible */
+  height: 1px; /* Altura del separador */
+  background-color: #ccc; /* Color gris claro */
+  margin: 0 10px; /* Margen horizontal para separar los elementos */
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+
+.deleteButton {
+  border-radius: 10px; /* Hace el botón redondo */
+  padding: 10px 10px; 
+  background-color: #e40522f1; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Quita el borde del botón */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+.deleteButton button:hover {
+  background-color: #d64531; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: center; /* Alinea horizontalmente los elementos */
+  margin-top: 30px; /* Espacio arriba de los botones */
+  gap: 20px; 
+}
+.customButton {
+  margin-top: 10px; /* Espacio entre los botones */
+  padding: 15px 30px; /* Padding para los botones */
+  border: none;
+  background-color: #0070f3; /* Color de fondo azul */
+  color: white; /* Color del texto */
+  border-radius: 10px; /* Bordes redondeados para hacer las puntas redondas */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+  width: 100%; /* Hacer el botón largo */
+  max-width: 300px; /* Establecer un ancho máximo */
+  text-align: center; /* Centrar el texto */
+}
+
+.customButton:hover {
+  background-color: #0056b3; /* Color de fondo azul oscuro al pasar el mouse */
+}
+
+
+.imageWrapper {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+
+.image {
+  width: 80px;  /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: auto;
+  object-fit: cover;
+}
+
+.description {
+  flex: 1;
+  text-align: center;
 }
 
 .logo {
@@ -88,5 +177,7 @@
   .grid {
     width: 100%;
     flex-direction: column;
+    margin-top: 100px; 
   }
 }
+
